@@ -9,20 +9,21 @@ const Footer = () => {
       : "text-gray-600 hover:text-gray-800 transition-colors";
 
   return (
-    <footer className="text-gray-600 body-font overflow-x-hidden">
-      <div className="container px-5 py-20 mx-auto flex md:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <footer className="text-gray-600 body-font overflow-x-hidden border-t border-gray-300">
+      <div className="container px-5 py-16 mx-auto flex md:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         {/* Logo and Description */}
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <NavLink
             to="/"
-            className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+            className="flex flex-col items-center md:items-start text-gray-900"
           >
-            <img
-              src="/images/logo.png"
-              alt="Adamya Samskruthi Logo"
-              className="w-10 h-10 object-contain"
-            />
-            <span className="ml-3 text-xl">Adamya Samskruthi</span>
+          <img
+  src="/images/logo.png"
+  alt="Adamya Samskruthi Logo"
+  className="w-20 h-14 object-contain mb-2"
+/>
+
+            <span className="text-xl font-medium">Adamya Samskruthi</span>
           </NavLink>
           <p className="mt-2 text-sm text-gray-500">
             Fostering cultural values and empowering children through education
@@ -30,13 +31,14 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Footer Navigation */}
+        {/* Footer Navigation Sections */}
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-          {/* ABOUT */}
-          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+          {/* ABOUT — Hidden on small screens */}
+          <div className="hidden md:block lg:w-1/3 md:w-1/2 w-full px-4">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 pb-1 border-b-2 border-red-500 w-fit mx-auto md:mx-0">
               ABOUT
             </h2>
+
             <ul className="list-none space-y-2">
               <li>
                 <NavLink to="/about" className={linkClass}>
@@ -63,7 +65,7 @@ const Footer = () => {
 
           {/* LEGAL */}
           <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 pb-1 border-b-2 border-red-500 w-fit mx-auto md:mx-0">
               LEGAL
             </h2>
             <ul className="list-none space-y-2">
@@ -91,8 +93,8 @@ const Footer = () => {
           </div>
 
           {/* CONTACT */}
-          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
+          <div className="lg:w-1/3 md:w-1/2 w-full px-4 mt-8 md:mt-0">
+            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 pb-1 border-b-2 border-red-500 w-fit mx-auto md:mx-0">
               CONTACT
             </h2>
             <ul className="list-none space-y-2">
@@ -131,7 +133,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-gray-100">
+      <div className="bg-gray-100 border-t border-gray-300">
         <div className="container mx-auto py-4 px-5 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm text-center sm:text-left">
             © {new Date().getFullYear()} Adamya Samskruthi — All Rights Reserved

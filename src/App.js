@@ -15,11 +15,13 @@ import Privacy from "./components/Footer/Privarcy";
 import TermsAndConditions from "./components/Footer/TermsAndConditions";
 import GrievanceRedressal from "./components/Footer/GrievanceRedressal";
 import Disclaimer from "./components/Footer/Disclaimer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

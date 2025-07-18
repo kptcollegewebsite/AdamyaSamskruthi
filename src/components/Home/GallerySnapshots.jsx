@@ -13,8 +13,6 @@ const galleryImages = [
   "/images/events/gurupoornima/1.jpg",
   "/images/events/niveditha/1.jpg",
   "/images/events/public/1.jpg",
-  "/images/events/public/2.jpg",
-  "/images/events/public/3.jpg",
   "/images/events/public/4.jpg",
   "/images/events/public/5.jpg",
   "/images/events/public/6.jpg",
@@ -46,7 +44,7 @@ export default function GallerySnapshots() {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.9 }}
         viewport={{ once: true }}
         className="text-center max-w-4xl mx-auto"
       >
@@ -61,11 +59,11 @@ export default function GallerySnapshots() {
       <div className="overflow-hidden relative max-w-6xl mx-auto">
         <style>{`
           @keyframes slide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
           }
           .marquee-track {
-            animation: slide 60s linear infinite;
+            animation: slide 180s linear infinite;
           }
         `}</style>
 

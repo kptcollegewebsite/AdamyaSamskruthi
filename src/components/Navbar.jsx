@@ -27,10 +27,10 @@ const Navbar = () => {
   return (
     <header
       className={`text-gray-600 body-font sticky top-0 z-50 transition-all ${
-        scrolled ? "bg-white shadow-md" : "bg-white"
+        scrolled ? "bg-white shadow-xl" : "bg-white"
       }`}
     >
-      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-5 overflow-x-hidden">
+      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-2 overflow-x-hidden">
         {/* Logo Section */}
         <NavLink
           to="/"
