@@ -14,7 +14,7 @@ const ContactPage = () => {
             marginWidth="0"
             scrolling="no"
             style={{ filter: "grayscale(1) contrast(1.2) opacity(0.4)" }}
-            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Karnataka+(My%20Business)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d697.5796363031433!2d74.85637869938735!3d12.893053912097637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a141b26c5a7%3A0xf7fe0cc5fbececc9!2sShree%20Rama%20Mandira!5e1!3m2!1sen!2sin!4v1752732070373!5m2!1sen!2sin"
           ></iframe>
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md z-10">
             <div className="lg:w-1/2 px-6">
@@ -30,15 +30,15 @@ const ContactPage = () => {
                 EMAIL
               </h2>
               <a
-                href="mailto:example@email.com"
+                href="mailto:adamyasamskruthi@gmail.com"
                 className="text-indigo-500 leading-relaxed"
               >
-                example@email.com
+                adamyasamskruthi@gmail.com
               </a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 PHONE
               </h2>
-              <p className="leading-relaxed">+91 98765 43210</p>
+              <p className="leading-relaxed">+91 96060 89600</p>
             </div>
           </div>
         </div>
