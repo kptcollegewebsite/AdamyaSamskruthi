@@ -17,11 +17,6 @@ const About = () => {
       <Accomplishments />
       <CallToAction />
       <Volunteers />
-      {/* <Mission />
-      <TreeMission />
-      <MissionPage />
-      <ShaktiPage />
-      <OurTeam /> */}
     </div>
   );
 };
