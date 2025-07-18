@@ -25,7 +25,7 @@ const Navbar = () => {
           to="/"
         >
           <img
-            src="/logo.png"
+            src="logo.png"
             alt="Adamya Samskruthi Logo"
             className="w-10 h-10 object-cover"
           />
