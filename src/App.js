@@ -1,5 +1,5 @@
 import "./App.css";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar";
 import ContactPage from "./components/Contact";
 import { Route, Routes } from "react-router-dom";
@@ -11,6 +11,10 @@ import Events from "./components/Events/Events";
 import EventDetailsPage from "./components/Events/EventDetailsPage";
 import Gallery from "./components/Gallery";
 import PanchaTatva from "./components/Panchatatva/PanchaTatva";
+import Privacy from "./components/Footer/Privarcy";
+import TermsAndConditions from "./components/Footer/TermsAndConditions";
+import GrievanceRedressal from "./components/Footer/GrievanceRedressal";
+import Disclaimer from "./components/Footer/Disclaimer";
 
 function App() {
   return (
@@ -26,6 +30,11 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/grievance-redressal" element={<GrievanceRedressal />} />
       </Routes>
       <Footer />
     </div>

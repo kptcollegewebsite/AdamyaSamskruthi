@@ -9,7 +9,7 @@ const Footer = () => {
       : "text-gray-600 hover:text-gray-800 transition-colors";
 
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 body-font overflow-x-hidden">
       <div className="container px-5 py-20 mx-auto flex md:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         {/* Logo and Description */}
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
@@ -18,9 +18,9 @@ const Footer = () => {
             className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
           >
             <img
-              src="/logo.png"
+              src="/images/logo.png"
               alt="Adamya Samskruthi Logo"
-              className="w-10 h-10 bg-red-100 p-0"
+              className="w-10 h-10 object-contain"
             />
             <span className="ml-3 text-xl">Adamya Samskruthi</span>
           </NavLink>
@@ -33,7 +33,7 @@ const Footer = () => {
         {/* Footer Navigation */}
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           {/* ABOUT */}
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
               ABOUT
             </h2>
@@ -44,99 +44,70 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about#pancha-tatva" className={linkClass}>
+                <NavLink to="/panchatatva" className={linkClass}>
                   Pancha Tatva
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about#core-values" className={linkClass}>
-                  Core Values
+                <NavLink to="/events" className={linkClass}>
+                  Events
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/about#vivekananda" className={linkClass}>
-                  Swami Vivekananda Vision
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-
-          {/* PROGRAMS */}
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              PROGRAMS
-            </h2>
-            <ul className="list-none space-y-2">
-              <li>
-                <NavLink to="/programs#ramarajya" className={linkClass}>
-                  Ramarajya
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/programs#spv" className={linkClass}>
-                  Sadhaka Parichaya Varga
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/programs#raksha-bandhana" className={linkClass}>
-                  Raksha Bandhana
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/programs#kargil" className={linkClass}>
-                  Kargil Celebration
+                <NavLink to="/gallery" className={linkClass}>
+                  Gallery
                 </NavLink>
               </li>
             </ul>
           </div>
 
-          {/* ACTIVITIES */}
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          {/* LEGAL */}
+          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              ACTIVITIES
+              LEGAL
             </h2>
             <ul className="list-none space-y-2">
               <li>
-                <NavLink to="/workshops" className={linkClass}>
-                  Workshops
+                <NavLink to="/privacy-policy" className={linkClass}>
+                  Privacy Policy
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/workshops#temple-cleaning" className={linkClass}>
-                  Temple Cleaning
+                <NavLink to="/terms-and-conditions" className={linkClass}>
+                  Terms & Conditions
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/workshops#camps" className={linkClass}>
-                  Children Camps
+                <NavLink to="/disclaimer" className={linkClass}>
+                  Disclaimer
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/workshops#events" className={linkClass}>
-                  Cultural Events
+                <NavLink to="/grievance-redressal" className={linkClass}>
+                  Grievance Redressal
                 </NavLink>
               </li>
             </ul>
           </div>
 
           {/* CONTACT */}
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <div className="lg:w-1/3 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
               CONTACT
             </h2>
             <ul className="list-none space-y-2">
               <li>
                 <a
-                  className="text-gray-600 hover:text-gray-800"
                   href="mailto:adamyasamskruthi@gmail.com"
+                  className="text-gray-600 hover:text-gray-800"
                 >
                   adamyasamskruthi@gmail.com
                 </a>
               </li>
               <li>
                 <a
+                  href="tel:+919606089600"
                   className="text-gray-600 hover:text-gray-800"
-                  href="tel:+919876543210"
                 >
                   +91 96060 89600
                 </a>
@@ -146,10 +117,10 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  className="text-gray-600 hover:text-gray-800"
                   href="https://instagram.com"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-gray-800"
                 >
                   Follow on Instagram
                 </a>
@@ -159,51 +130,54 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar with social icons */}
+      {/* Bottom Bar */}
       <div className="bg-gray-100">
         <div className="container mx-auto py-4 px-5 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm text-center sm:text-left">
-            © Copyright All Rights Reserved {new Date().getFullYear()},
-            <span className="text-gray-600 ml-1">Adamya Samskruthi</span>
+            © {new Date().getFullYear()} Adamya Samskruthi — All Rights Reserved
           </p>
 
           <p className="text-gray-500 text-sm text-center sm:text-left">
-            Maintained by —
+            Maintained by —{" "}
             <span className="text-gray-600 ml-1 hover:text-red-600 cursor-pointer">
-              Swasyaha Solutions{" "}
+              Swasyaha Solutions
             </span>
           </p>
 
-          <div className="flex space-x-4 mt-2 sm:mt-0">
+          <div className="flex justify-center sm:justify-end space-x-4 mt-2 sm:mt-0">
             <a
               href="https://facebook.com"
+              aria-label="Facebook"
               target="_blank"
-              rel="noreferrer"
-              className="text-gray-500 hover:text-red-600 text-l"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-red-600 text-lg"
             >
               <FaFacebookF />
             </a>
             <a
               href="https://twitter.com"
+              aria-label="Twitter"
               target="_blank"
-              rel="noreferrer"
-              className="text-gray-500 hover:text-red-600 text-l"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-red-600 text-lg"
             >
               <FaTwitter />
             </a>
             <a
               href="https://instagram.com"
+              aria-label="Instagram"
               target="_blank"
-              rel="noreferrer"
-              className="text-gray-500 hover:text-red-600 text-l"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-red-600 text-lg"
             >
               <FaInstagram />
             </a>
             <a
               href="https://youtube.com"
+              aria-label="YouTube"
               target="_blank"
-              rel="noreferrer"
-              className="text-gray-500 hover:text-red-600 text-l"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-red-600 text-lg"
             >
               <FaYoutube />
             </a>
