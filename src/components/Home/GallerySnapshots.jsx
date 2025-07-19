@@ -3,16 +3,71 @@ import { motion } from "framer-motion";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const galleryImages = [
-  "/images/events/abhimani/1.jpg",
+  "/images/events/booksdistribution/1.jpg",
+  "/images/events/booksdistribution/7.jpg",
+  "/images/events/booksdistribution/8.jpg",
+  "/images/events/booksdistribution/9.jpg",
+  "/images/events/clothesdistribution/1.jpg",
+  "/images/events/clothesdistribution/2.jpg",
+  "/images/events/freedomfighterbooks/2.jpg",
+  "/images/events/freedomfighterbooks/3.jpg",
+  "/images/events/kalinali/1.jpg",
+  "/images/events/kalinali/2.jpg",
+  "/images/events/kalinali/3.jpg",
+  "/images/events/kalinali/4.jpg",
+  "/images/events/kalinali/5.jpg",
+  "/images/events/kalinali/6.jpg",
+  "/images/events/kalinali/7.jpg",
+  "/images/events/kalinali/8.jpg",
+  "/images/events/kalinali/9.jpg",
+  "/images/events/kalinali/10.jpg",
+  "/images/events/kalinali/11.jpg",
+  "/images/events/kalinali/12.jpg",
+  "/images/events/kalinali/13.jpg",
+  "/images/events/kalinali/19.jpg",
+  "/images/events/kalinali/20.jpg",
+  "/images/events/kalinali/21.jpg",
+  "/images/events/kalinali/22.jpg",
+  "/images/events/kalinali/23.jpg",
+  "/images/events/kalinali/24.jpg",
+  "/images/events/kalinali/25.jpg",
+  "/images/events/kargil/1.jpg",
+  "/images/events/kargil/2.jpg",
+  "/images/events/kargil/5.jpg",
+  "/images/events/kargil/6.jpg",
+  "/images/events/notebookdistribution/1.jpg",
+  "/images/events/notebookdistribution/2.jpg",
+  "/images/events/notebookdistribution/3.jpg",
+  "/images/events/notebookdistribution/8.jpg",
+  "/images/events/notebookdistribution/9.jpg",
+  "/images/events/templecleaning/1.jpg",
+  "/images/events/templecleaning/2.jpg",
+  "/images/events/templecleaning/7.jpg",
+  "/images/events/vanavasiseva/1.jpg",
+  "/images/events/vanavasiseva/2.jpg",
+  "/images/events/vanavasiseva/7.jpg",
+  "/images/events/abhimani/2.jpg",
   "/images/events/achieversintro/1.jpg",
+  "/images/events/achieversintro/2.jpg",
+  "/images/events/achieversintro/4.jpg",
   "/images/events/chinnarachittara/1.jpg",
+  "/images/events/chinnarachittara/3.jpg",
   "/images/events/desham/1.jpg",
-  "/images/events/drvijaya/1.jpg",
+  "/images/events/desham/12.jpg",
+  "/images/events/desham/13.jpg",
+  "/images/events/drvijaya/4.jpg",
+  "/images/events/drvijaya/5.jpg",
   "/images/events/educate/1.jpg",
+  "/images/events/educate/4.jpg",
   "/images/events/girlchildday/1.jpg",
+  "/images/events/girlchildday/2.jpg",
   "/images/events/gurupoornima/1.jpg",
+  "/images/events/gurupoornima/4.jpg",
   "/images/events/niveditha/1.jpg",
+  "/images/events/niveditha/5.jpg",
   "/images/events/public/1.jpg",
+  "/images/events/public/2.jpg",
+  "/images/events/public/3.jpg",
   "/images/events/public/4.jpg",
   "/images/events/public/5.jpg",
   "/images/events/public/6.jpg",
@@ -34,8 +89,14 @@ const galleryImages = [
   "/images/events/public/22.jpg",
   "/images/events/public/23.jpg",
   "/images/events/sanskritclass/1.jpg",
+  "/images/events/sanskritclass/3.jpg",
   "/images/events/school/1.jpg",
+  "/images/events/school/4.jpg",
+  "/images/events/school/5.jpg",
   "/images/events/sharadapooja/1.jpg",
+  "/images/events/sharadapooja/2.jpg",
+  "/images/events/sharadapooja/3.jpg",
+  "/images/events/sharadapooja/8.jpg",
 ];
 
 export default function GallerySnapshots() {
@@ -63,7 +124,7 @@ export default function GallerySnapshots() {
             100% { transform: translateX(0); }
           }
           .marquee-track {
-            animation: slide 180s linear infinite;
+            animation: slide 480s linear infinite;
           }
         `}</style>
 
@@ -79,14 +140,14 @@ export default function GallerySnapshots() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-6 space-x-1">
+        {/* <div className="flex justify-center mt-6 space-x-1">
           {galleryImages.map((_, idx) => (
             <span
               key={idx}
               className="h-2 w-2 bg-gray-400 rounded-full inline-block"
             ></span>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

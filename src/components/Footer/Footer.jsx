@@ -17,11 +17,11 @@ const Footer = () => {
             to="/"
             className="flex flex-col items-center md:items-start text-gray-900"
           >
-          <img
-  src="/images/logo.png"
-  alt="Adamya Samskruthi Logo"
-  className="w-20 h-14 object-contain mb-2"
-/>
+            <img
+              src="/images/logo.png"
+              alt="Adamya Samskruthi Logo"
+              className="w-20 h-14 object-contain mb-2"
+            />
 
             <span className="text-xl font-medium">Adamya Samskruthi</span>
           </NavLink>
@@ -148,7 +148,7 @@ const Footer = () => {
 
           <div className="flex justify-center sm:justify-end space-x-4 mt-2 sm:mt-0">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/1Bpkb9DkKU/"
               aria-label="Facebook"
               target="_blank"
               rel="noopener noreferrer"

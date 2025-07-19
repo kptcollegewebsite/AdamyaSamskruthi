@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
@@ -20,24 +21,24 @@ const CallToAction = () => {
           financially—every hand strengthens our mission.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="/register"
+          <Link
+            to="/donate"
             className="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition"
           >
             Register
-          </a>
-          <a
-            href="/volunteer"
+          </Link>
+          <Link
+            to="/donate"
             className="bg-red-100 text-red-700 px-6 py-3 rounded-full hover:bg-red-200 transition"
           >
             Volunteer
-          </a>
-          <a
-            href="/newsletter"
+          </Link>
+          <Link
+            to="/contact"
             className="bg-white border border-red-300 text-red-700 px-6 py-3 rounded-full hover:bg-red-50 transition"
           >
             Stay Informed
-          </a>
+          </Link>
         </div>
       </motion.div>
     </div>

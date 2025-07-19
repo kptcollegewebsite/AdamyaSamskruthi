@@ -10,13 +10,12 @@ import CallToAction from "./CallToAction";
 const About = () => {
   return (
     <div>
-      <Mission />
       <OurStory />
-      <CoreBeliefs />
+      <Mission />
       <OurTeam />
       <Accomplishments />
       <CallToAction />
-      <Volunteers />
+      <CoreBeliefs />
     </div>
   );
 };
