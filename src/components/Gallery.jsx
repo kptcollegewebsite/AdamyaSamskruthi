@@ -3,19 +3,109 @@ import { motion } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 
 const images = {
-  1: ["/images/events/abhimani/1.jpg", "/images/events/abhimani/2.jpg"],
+  1: [
+    "/images/events/booksdistribution/1.jpg",
+    "/images/events/booksdistribution/2.jpg",
+    "/images/events/booksdistribution/3.jpg",
+    "/images/events/booksdistribution/4.jpg",
+    "/images/events/booksdistribution/5.jpg",
+    "/images/events/booksdistribution/6.jpg",
+    "/images/events/booksdistribution/7.jpg",
+    "/images/events/booksdistribution/8.jpg",
+    "/images/events/booksdistribution/9.jpg",
+  ],
   2: [
+    "/images/events/clothesdistribution/1.jpg",
+    "/images/events/clothesdistribution/2.jpg",
+    "/images/events/clothesdistribution/3.jpg",
+    "/images/events/clothesdistribution/4.jpg",
+    "/images/events/clothesdistribution/5.jpg",
+    "/images/events/clothesdistribution/6.jpg",
+    "/images/events/clothesdistribution/7.jpg",
+    "/images/events/clothesdistribution/8.jpg",
+  ],
+  3: [
+    "/images/events/freedomfighterbooks/1.jpg",
+    "/images/events/freedomfighterbooks/2.jpg",
+    "/images/events/freedomfighterbooks/3.jpg",
+  ],
+  4: [
+    "/images/events/kalinali/1.jpg",
+    "/images/events/kalinali/2.jpg",
+    "/images/events/kalinali/3.jpg",
+    "/images/events/kalinali/4.jpg",
+    "/images/events/kalinali/5.jpg",
+    "/images/events/kalinali/6.jpg",
+    "/images/events/kalinali/7.jpg",
+    "/images/events/kalinali/8.jpg",
+    "/images/events/kalinali/9.jpg",
+    "/images/events/kalinali/10.jpg",
+    "/images/events/kalinali/11.jpg",
+    "/images/events/kalinali/12.jpg",
+    "/images/events/kalinali/13.jpg",
+    "/images/events/kalinali/14.jpg",
+    "/images/events/kalinali/15.jpg",
+    "/images/events/kalinali/16.jpg",
+    "/images/events/kalinali/17.jpg",
+    "/images/events/kalinali/18.jpg",
+    "/images/events/kalinali/19.jpg",
+    "/images/events/kalinali/20.jpg",
+    "/images/events/kalinali/21.jpg",
+    "/images/events/kalinali/22.jpg",
+    "/images/events/kalinali/23.jpg",
+    "/images/events/kalinali/24.jpg",
+    "/images/events/kalinali/25.jpg",
+  ],
+  5: [
+    "/images/events/kargil/1.jpg",
+    "/images/events/kargil/2.jpg",
+    "/images/events/kargil/3.jpg",
+    "/images/events/kargil/4.jpg",
+    "/images/events/kargil/5.jpg",
+    "/images/events/kargil/6.jpg",
+  ],
+  6: [
+    "/images/events/notebookdistribution/1.jpg",
+    "/images/events/notebookdistribution/2.jpg",
+    "/images/events/notebookdistribution/3.jpg",
+    "/images/events/notebookdistribution/4.jpg",
+    "/images/events/notebookdistribution/5.jpg",
+    "/images/events/notebookdistribution/6.jpg",
+    "/images/events/notebookdistribution/7.jpg",
+    "/images/events/notebookdistribution/8.jpg",
+    "/images/events/notebookdistribution/9.jpg",
+  ],
+  7: [
+    "/images/events/templecleaning/1.jpg",
+    "/images/events/templecleaning/2.jpg",
+    "/images/events/templecleaning/3.jpg",
+    "/images/events/templecleaning/4.jpg",
+    "/images/events/templecleaning/5.jpg",
+    "/images/events/templecleaning/6.jpg",
+    "/images/events/templecleaning/7.jpg",
+  ],
+  8: [
+    "/images/events/vanavasiseva/1.jpg",
+    "/images/events/vanavasiseva/2.jpg",
+    "/images/events/vanavasiseva/3.jpg",
+    "/images/events/vanavasiseva/4.jpg",
+    "/images/events/vanavasiseva/5.jpg",
+    "/images/events/vanavasiseva/6.jpg",
+    "/images/events/vanavasiseva/7.jpg",
+  ],
+  9: ["/images/events/abhimani/1.jpg", "/images/events/abhimani/2.jpg"],
+  10: [
     "/images/events/achieversintro/1.jpg",
     "/images/events/achieversintro/2.jpg",
     "/images/events/achieversintro/3.jpg",
     "/images/events/achieversintro/4.jpg",
   ],
-  3: [
+  11: [
     "/images/events/chinnarachittara/1.jpg",
     "/images/events/chinnarachittara/2.jpg",
     "/images/events/chinnarachittara/3.jpg",
   ],
-  4: [
+  12: [
     "/images/events/desham/1.jpg",
     "/images/events/desham/2.jpg",
     "/images/events/desham/3.jpg",
@@ -30,32 +120,37 @@ const images = {
     "/images/events/desham/12.jpg",
     "/images/events/desham/13.jpg",
   ],
-  5: [
+  13: [
     "/images/events/drvijaya/1.jpg",
     "/images/events/drvijaya/2.jpg",
     "/images/events/drvijaya/3.jpg",
+    "/images/events/drvijaya/4.jpg",
+    "/images/events/drvijaya/5.jpg",
   ],
-  6: [
+  14: [
     "/images/events/educate/1.jpg",
     "/images/events/educate/2.jpg",
     "/images/events/educate/3.jpg",
     "/images/events/educate/4.jpg",
   ],
-  7: ["/images/events/girlchildday/1.jpg", "/images/events/girlchildday/2.jpg"],
-  8: [
+  15: [
+    "/images/events/girlchildday/1.jpg",
+    "/images/events/girlchildday/2.jpg",
+  ],
+  16: [
     "/images/events/gurupoornima/1.jpg",
     "/images/events/gurupoornima/2.jpg",
     "/images/events/gurupoornima/3.jpg",
     "/images/events/gurupoornima/4.jpg",
   ],
-  9: [
+  17: [
     "/images/events/niveditha/1.jpg",
     "/images/events/niveditha/2.jpg",
     "/images/events/niveditha/3.jpg",
     "/images/events/niveditha/4.jpg",
     "/images/events/niveditha/5.jpg",
   ],
-  10: [
+  18: [
     "/images/events/public/1.jpg",
     "/images/events/public/2.jpg",
     "/images/events/public/3.jpg",
@@ -80,19 +175,19 @@ const images = {
     "/images/events/public/22.jpg",
     "/images/events/public/23.jpg",
   ],
-  11: [
+  19: [
     "/images/events/sanskritclass/1.jpg",
     "/images/events/sanskritclass/2.jpg",
     "/images/events/sanskritclass/3.jpg",
   ],
-  12: [
+  20: [
     "/images/events/school/1.jpg",
     "/images/events/school/2.jpg",
     "/images/events/school/3.jpg",
     "/images/events/school/4.jpg",
     "/images/events/school/5.jpg",
   ],
-  13: [
+  21: [
     "/images/events/sharadapooja/1.jpg",
     "/images/events/sharadapooja/2.jpg",
     "/images/events/sharadapooja/3.jpg",
@@ -103,7 +198,6 @@ const images = {
     "/images/events/sharadapooja/8.jpg",
   ],
 };
-
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 

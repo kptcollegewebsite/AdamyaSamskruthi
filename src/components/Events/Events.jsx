@@ -49,7 +49,7 @@ const EventCard = ({ event }) => {
         {/* Read More - Link to event detail page */}
         <Link
           to={`/events/${event.id}`}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-indigo-500 rounded hover:bg-indigo-600 focus:ring-4 focus:outline-none focus:ring-indigo-300"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-red-500 rounded hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-indigo-300"
         >
           Read more
           <svg
