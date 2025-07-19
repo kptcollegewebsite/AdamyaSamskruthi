@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import ContactPage from "./components/Contact";
 import { Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
-import WorkshopsPage from "./components/WorkshopsPage";
 import Home from "./components/Home/Home";
 import Donate from "./components/Donate/Donate";
 import Events from "./components/Events/Events";
@@ -16,6 +15,7 @@ import TermsAndConditions from "./components/Footer/TermsAndConditions";
 import GrievanceRedressal from "./components/Footer/GrievanceRedressal";
 import Disclaimer from "./components/Footer/Disclaimer";
 import ScrollToTop from "./components/ScrollToTop";
+import WorkshopsPage from "./components/workshops/WorkshopsPage";
 
 function App() {
   return (
