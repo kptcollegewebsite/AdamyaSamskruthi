@@ -30,11 +30,11 @@ export const workshops = [
     description:
       "A 3-day immersive workshop where children experienced character-building activities, yoga, stories from Indian epics, bhajans, games, and value education in a joyful residential setting.",
     images: [
-      "/images/events/residentialworkshop/1.jpg",
-      "/images/events/residentialworkshop/2.jpg",
-      "/images/events/residentialworkshop/3.jpg",
-      "/images/events/residentialworkshop/4.jpg",
-      "/images/events/residentialworkshop/5.jpg",
+      "/images/events/public/21.jpg",
+      "/images/events/public/22.jpg",
+      "/images/events/vanavasiseva/1.jpg",
+      "/images/events/4.jpg",
+      "/images/events/sharadapooja/7.jpg",
     ],
   },
   {

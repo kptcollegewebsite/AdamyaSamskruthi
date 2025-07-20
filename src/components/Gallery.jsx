@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FaTimes } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const images = {
   1: [
@@ -198,50 +198,97 @@ const images = {
     "/images/events/sharadapooja/8.jpg",
   ],
 };
+
+const flatImages = Object.values(images).flat();
+
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((prev) => (prev + 1) % flatImages.length);
+    }
+  };
+
+  const handlePrev = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(
+        (prev) => (prev - 1 + flatImages.length) % flatImages.length
+      );
+    }
+  };
+
+  const closeModal = () => setSelectedIndex(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "Escape") closeModal();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex]);
 
   return (
     <div className="p-4 md:p-10 bg-gradient-to-br from-orange-100 to-blue-100 min-h-screen">
       <h1 className="text-3xl md:text-5xl font-bold text-center mb-10 text-gray-700">
         Event Gallery
       </h1>
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        {Object.values(images)
-          .flat()
-          .map((img, index) => (
-            <motion.img
-              key={index}
-              src={img}
-              alt="Event"
-              className="w-full h-60 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
-              whileHover={{ scale: 1.05 }}
-              onClick={() => setSelectedImage(img)}
-            />
-          ))}
+        {flatImages.map((img, index) => (
+          <motion.img
+            key={index}
+            src={img}
+            alt="Event"
+            className="w-full h-60 object-cover rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setSelectedIndex(index)}
+          />
+        ))}
       </div>
 
-      {selectedImage && (
-        <motion.div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-3xl w-full mx-4">
-            <FaTimes
-              className="absolute top-2 right-2 text-red text-2xl cursor-pointer"
-              onClick={() => setSelectedImage(null)}
-            />
-            <img
-              src={selectedImage}
-              alt="Zoomed Event"
-              className="w-full rounded-lg shadow-xl max-h-[95vh] object-contain"
-            />
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {selectedIndex !== null && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeModal}
+          >
+            <div
+              className="relative max-w-4xl w-full mx-4"
+              onClick={(e) => e.stopPropagation()} // prevent modal close on image click
+            >
+              <FaTimes
+                className="absolute top-2 right-2 text-white text-3xl cursor-pointer z-50"
+                onClick={closeModal}
+              />
+              <FaChevronLeft
+                className="absolute left-2 top-1/2 -translate-y-1/2 text-white text-3xl cursor-pointer z-50"
+                onClick={handlePrev}
+              />
+              <FaChevronRight
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-white text-3xl cursor-pointer z-50"
+                onClick={handleNext}
+              />
+              <FaTimes
+                className="absolute top-2 right-2 text-white text-3xl cursor-pointer z-50"
+                onClick={closeModal}
+              />
+
+              <img
+                src={flatImages[selectedIndex]}
+                alt="Zoomed Event"
+                className="w-full rounded-lg shadow-xl max-h-[95vh] object-contain"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
