@@ -16,7 +16,7 @@ const DonationMethods = () => {
             Scan the UPI QR code to donate
           </p>
           <img
-            src="/images/upi-qr.png"
+            src="/images/upipay.png"
             alt="UPI QR Code"
             className="w-52 h-52 object-contain border rounded"
           />
@@ -38,16 +38,16 @@ const DonationMethods = () => {
               <strong>Account Name:</strong> Adamya Samskruthi Seva Trust
             </li>
             <li>
-              <strong>Account Number:</strong> 1234567890
+              <strong>Account Number:</strong> 7869584317
             </li>
             <li>
-              <strong>Bank Name:</strong> State Bank of India
+              <strong>Bank Name:</strong> INDIAN BANK
             </li>
             <li>
-              <strong>Branch:</strong> Jayanagar 4th Block
+              <strong>Branch:</strong> Banashankari II stage , Bengaluru
             </li>
             <li>
-              <strong>IFSC:</strong> SBIN0001234
+              <strong>IFSC:</strong> IDIB000B074
             </li>
           </ul>
         </div>
@@ -65,12 +65,10 @@ const DonationMethods = () => {
             events.
           </p>
           <a
-            href="https://example.com/donate"
-            target="_blank"
-            rel="noopener noreferrer"
+                  href="tel:+919606089600"
             className="inline-block mt-2 text-sm text-red-600 hover:underline"
           >
-            Click here to donate via secure online portal →
+            Click here to call →
           </a>
         </div>
       </div>

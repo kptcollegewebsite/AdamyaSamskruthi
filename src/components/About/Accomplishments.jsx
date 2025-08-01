@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    value: "500+",
+    value: "800+",
     label: "Children Impacted",
     desc: "Through education, mentoring, and cultural programs.",
   },
   {
-    value: "80+",
+    value: "100+",
     label: "Events & Workshops",
     desc: "Conducted across schools and local communities.",
   },
